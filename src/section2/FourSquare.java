@@ -14,9 +14,9 @@ public class FourSquare {
 		// 5. Set the pen width to 5
 		robot.setPenWidth(5);
 		// 6. Use a for loop to repeat steps #7 to #8, four times...
-			for() {
+			for( int i = 0; i < 4; i++) {   // <
 				// 7. Set the pen color to random
-				setRandomPenColor();
+				robot.setRandomPenColor();
 				// 1. Call the drawSquare() method
 				drawSquare();
 				// 8. Turn the robot 90 degrees to the right
@@ -25,15 +25,19 @@ public class FourSquare {
 	}
 
 	
+	private void setRandomPenColor() {
+		// TODO Auto-generated method stub
+		
+	}
+
+
 	void drawSquare() {
 		JOptionPane.showMessageDialog(null, "yay! you called the drawSquare() method!");
 		/* 3. Fill in the code to draw a square inside the method below. */
-		robot.move(100);
-		robot.turn(90);
-		robot.move(100);
-		robot.turn(90);
-		robot.move(100);
-		robot.turn(90);
+		for( int i = 0; i < 4; i++) {
+			robot.move(100);
+			robot.turn(90); 
+		}
 	}
 
 	public static void main(String[] args) {
